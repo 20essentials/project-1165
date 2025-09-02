@@ -1,0 +1,70 @@
+<script>
+  import { gsap } from '@/lib/gsap';
+
+  const commonProps: gsap.TweenVars = {
+    duration: 3,
+    repeat: -1,
+    yoyo: true,
+    ease: 'power3.in',
+    strokeDasharray: '20 20'
+  };
+
+  gsap.fromTo(
+    '.fill-outset-d',
+    { drawSVG: '0% 10%', ...commonProps },
+    { drawSVG: '90% 100%', ...commonProps }
+  );
+</script>
+
+<section class='am-section'>
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    xml:space='preserve'
+    width='1080'
+    height='1080'
+    viewBox='0 0 285.75 285.75'
+    ><g class='group'
+      ><path
+        class='path fill-inner'
+        d='M54.233 142.065c50.361-74.17 104.02 77.411 177.324 0'></path>
+      <path
+        class='path fill-outset-d'
+        d='M54.233 142.065c50.361-74.17 104.02 77.411 177.324 0'></path>
+    </g></svg
+  >
+</section>
+
+<style>
+  .am-section {
+    height: 100vh;
+    position: relative;
+    background: conic-gradient(from 90deg at 50% 0%, #111, 50%, #222, #111);
+  }
+
+  svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .group {
+    display: inline;
+    opacity: 1;
+  }
+
+  .path {
+    fill: none;
+    stroke-linejoin: round;
+  }
+
+  .fill-inner {
+    stroke: #fff;
+    stroke-width: 0.79375;
+  }
+
+  .fill-outset-d {
+    stroke: yellow;
+    stroke-dasharray: 1 18;
+    stroke-linecap: round;
+  }
+</style>

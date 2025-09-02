@@ -1,0 +1,57 @@
+<script>
+  import { gsap } from '@/lib/gsap';
+  gsap.from('.fill-outset-b', { drawSVG: '50% 50%', duration: 1, repeat: -1, yoyo: true });
+</script>
+
+<section class='am-section'>
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    xml:space='preserve'
+    width='1080'
+    height='1080'
+    viewBox='0 0 285.75 285.75'
+    ><g class='group'
+      ><path
+        class='path fill-inner'
+        d='M54.233 142.065c50.361-74.17 104.02 77.411 177.324 0'></path>
+      <path
+        class='path fill-outset-b'
+        d='M54.233 142.065c50.361-74.17 104.02 77.411 177.324 0'></path>
+    </g></svg
+  >
+</section>
+
+<style>
+  .am-section {
+    height: 100vh;
+    position: relative;
+    background: conic-gradient(from -90deg at top left, black, white);
+  }
+
+  svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .group {
+    display: inline;
+    opacity: 1;
+    mix-blend-mode: multiply;
+  }
+
+  .path {
+    fill: none;
+    stroke-linejoin: round;
+  }
+
+  .fill-inner {
+    stroke: #000;
+    stroke-width: 0.79375;
+  }
+
+  .fill-outset-b {
+    stroke: lime;
+    stroke-width: 12px;
+  }
+</style>
