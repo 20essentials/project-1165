@@ -1,0 +1,76 @@
+<script>
+  import { gsap } from '@/lib/gsap';
+  import MotionPathPlugin from 'gsap/MotionPathPlugin';
+  import MotionPathHelper from 'gsap/MotionPathHelper';
+  gsap.registerPlugin(MotionPathPlugin, MotionPathHelper);
+
+  gsap.to(`.am-circle-b`, {
+    duration: 2,
+    yoyo: true,
+    repeat: -1,
+    motionPath: {
+      path: '.am-path-b',
+      autoRotate: true
+    }
+  });
+
+  // MotionPathHelper.create('.am-circle-b');
+</script>
+
+<section class='am-section'>
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'
+    xml:space='preserve'
+    width='1920'
+    height='1080'
+    viewBox='0 0 1920 1080'
+  >
+    
+    <path
+      class='am-path-b'
+      d='M-126.291,16.96 C-173.6154,118.308 -11.673,106.984 42.427,178.011 123.586,284.538 -21.876,571.002 75.946,613.776 124.837,635.151 266.968,498.642 360.326,506.931 453.677,515.218 397.579,848.297 450.279,880.441 608.348,976.845 788.758,627.545 860.768,591.564 910.756,566.5445 940.236,851.696 1085.144,927.98 1230.037,1004.254 1245.205,554.284 1335.232,574.803 1407.2444,591.209 1494.639,846.385 1611.706,871.539 1787.302,909.265 1952.68,366.667 1990.257,238.417 '
+    ></path>
+    <circle class='am-circle-b' cx='0' cy='0' r='50' fill='#000'></circle>
+  </svg>
+</section>
+
+<style>
+    
+
+  .am-section {
+    height: 100vh;
+    position: relative;
+    background: conic-gradient(at top right, lime, cyan);
+  }
+
+  path {
+    stroke: black;
+    fill: none;
+  }
+
+  circle {
+    fill: dodgerblue;
+    z-index: 3;
+  }
+
+  svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .svg-2 {
+    transform: scaleX(-1);
+  }
+
+  .group {
+    display: inline;
+    opacity: 1;
+  }
+
+  .path {
+    fill: none;
+    stroke-linejoin: round;
+  }
+</style>

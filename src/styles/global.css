@@ -2,6 +2,10 @@
   --gradient: linear-gradient(to bottom, #00f, white);
 }
 
+.copy-motion-path {
+  display: none !important;
+}
+
 @font-face {
   font-family: 'AnotherDanger';
   src: url('/assets/AnotherDanger.otf') format('opentype');

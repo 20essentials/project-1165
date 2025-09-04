@@ -1,0 +1,87 @@
+<script>
+  import { gsap } from '@/lib/gsap';
+  import MotionPathPlugin from 'gsap/MotionPathPlugin';
+  import MotionPathHelper from 'gsap/MotionPathHelper';
+  gsap.registerPlugin(MotionPathPlugin, MotionPathHelper);
+
+  gsap.to(`.am-circle`, {
+    duration: 2,
+    yoyo: true,
+    repeat: -1,
+    motionPath: {
+      path: '.am-path',
+      autoRotate: true
+    }
+  });
+
+  MotionPathHelper.create('.am-circle');
+</script>
+
+<section class='am-section'>
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'
+    xml:space='preserve'
+    width='1920'
+    height='1080'
+    viewBox='0 0 1920 1080'
+  >
+   
+    <!--  <path class="am-path" d="M 100 100 C 300 0 600 200 800 100 S 1300 200 1500 100"></path> -->
+    <path
+      class='am-path'
+      d='M0.419,33.539 C-117.895,286.911 79.891,431.181 242.92,502.46 340.707,545.21 453.839,640.904 559.226,705.178 717.299,801.582 900.07536,729.38872 972.084,693.406 1072.0655,643.371 1408.605,855.879 1588.653,896.908 1768.69,937.927 1977.369,792.051 2039.994,578.285 '
+    ></path>
+     <circle class='am-circle' cx='0' cy='0' r='55' fill='#000'></circle>
+  </svg>
+</section>
+
+<style>
+/*   :global(.copy-motion-path) {
+    position: absolute !important;
+  } */
+
+  .am-section {
+    height: 100vh;
+    position: relative;
+    background: radial-gradient(
+      circle at 50% 200%,
+      #000142,
+      #3b0083,
+      #b300c3,
+      #ff059f,
+      #ff4661,
+      #ffad86,
+      #fff3c7
+    );
+  }
+
+  path {
+    stroke: black;
+    fill: none;
+  }
+
+  circle {
+    fill: rgb(171, 8, 246);
+  }
+
+  svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .svg-2 {
+    transform: scaleX(-1);
+  }
+
+  .group {
+    display: inline;
+    opacity: 1;
+  }
+
+  .path {
+    fill: none;
+    stroke-linejoin: round;
+  }
+</style>
