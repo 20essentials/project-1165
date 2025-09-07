@@ -1,0 +1,91 @@
+<script>
+  import { gsap } from '@/lib/gsap';
+  import MotionPathPlugin from 'gsap/MotionPathPlugin';
+  import MotionPathHelper from 'gsap/MotionPathHelper';
+  gsap.registerPlugin(MotionPathPlugin, MotionPathHelper);
+
+  gsap.to(`.am-circle-15`, {
+    duration: 1.5,
+    ease: 'power1.inOut',
+    // yoyo: true,
+    repeat: -1,
+    motionPath: {
+      path: '.am-path-section-15',
+      autoRotate: true
+    }
+  });
+
+  // MotionPathHelper.create('.am-path-section-15');
+</script>
+
+<section class='am-section'>
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'
+    xml:space='preserve'
+    width='1920'
+    height='1080'
+    viewBox='0 0 1920 1080'
+  >
+    <path
+      class='am-path-section-15'
+      d='M0.419,33.539 C-117.895,286.911 79.891,431.181 242.92,502.46 340.707,545.21 453.839,640.904 559.226,705.178 717.299,801.582 900.07536,729.38872 972.084,693.406 1072.0655,643.371 1408.605,855.879 1588.653,896.908 1768.69,937.927 1977.369,792.051 3039.994,578.285 '
+    ></path>
+    <!-- <circle class='am-circle-15' cx='0' cy='0' r='50' fill='#000'></circle> -->
+
+    <image
+      href=`https://images.vexels.com/media/users/3/220602/isolated/preview/659989f1b774409dabd28c3734b7cc01-spider-eight-legged-silhouette.png`
+      x='-50'
+      y='-50'
+      class='am-circle-15'
+      width='100'
+      height='100'
+    />
+  </svg>
+</section>
+
+<style>
+  .am-section {
+    height: 100vh;
+    position: relative;
+    background: conic-gradient(
+      from -135deg at -10% center,
+      #ffa500,
+      #ff7715,
+      #ff522a,
+      #ff3f47,
+      #ff5482,
+      #ff69b4
+    );
+  }
+
+  path {
+    /* stroke: black; */
+    fill: none;
+  }
+
+  circle {
+    fill: dodgerblue;
+    z-index: 3;
+  }
+
+  svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .svg-2 {
+    transform: scaleX(-1);
+  }
+
+  .group {
+    display: inline;
+    opacity: 1;
+  }
+
+  .path {
+    fill: none;
+    stroke-linejoin: round;
+  }
+</style>
