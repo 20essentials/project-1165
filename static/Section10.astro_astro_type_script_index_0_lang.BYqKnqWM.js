@@ -1,0 +1,1 @@
+import{g as t}from"./gsap.DHKNsCCn.js";import{M as a}from"./MotionPathPlugin.40tP-nNg.js";import{M as o}from"./MotionPathHelper.efv8_HSC.js";t.registerPlugin(a,o);t.to(".am-circle",{duration:2,yoyo:!0,repeat:-1,motionPath:{path:".am-path",autoRotate:!0}});o.create(".am-circle");

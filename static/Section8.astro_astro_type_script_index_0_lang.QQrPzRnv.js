@@ -1,0 +1,1 @@
+import{g as e}from"./gsap.DHKNsCCn.js";const a=e.utils.toArray(".am-section-8 svg path");let o=5,r=0,i=e.timeline({repeat:-1,repeatDelay:1});a.map(t=>r+=t.getTotalLength());a.map(t=>{i.from(t,{drawSVG:0,duration:o*(t.getTotalLength()/r),ease:"power1.inOut"})});
